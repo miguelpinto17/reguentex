@@ -229,7 +229,7 @@ def v1_home():
   <div class="cover-img" data-parallax>{img("prateleiras-roupas", eager=True)}</div>
   <div class="cover-top">
     <p class="masthead rv" aria-hidden="true">REGUENTEX</p>
-    <div class="dateline"><span data-i18n="est">Est. 1998</span><span>São Tomé de Negrelos · Portugal</span></div>
+    <div class="dateline"><span data-i18n="est">Est. 1998</span><span class="loc">São Tomé de Negrelos · Portugal</span></div>
   </div>
   <div class="cover-mid">
     <div class="cl-col">
@@ -250,6 +250,7 @@ def v1_home():
     <div class="barcode rv" aria-hidden="true"><b>Reguentex</b><span>{ADDR[0]}</span><span>{ADDR[2]}</span><i class="bars"></i></div>
   </div>
 </section>
+<section class="intro-m"><p data-i18n="hero_text">{C["hero_text"][0]}</p></section>
 
 <section class="toc">
   <div class="toc-h rv"><p class="kicker" data-i18n="est">Est. 1998</p>{e("h2", "toc_title")}</div>
@@ -266,7 +267,7 @@ def v1_home():
     <p class="rv" data-i18n="company_p2">{C["company_p2"][0]}</p>
   </div>
   <blockquote class="pull rv" data-i18n="company_p3">{C["company_p3"][0]}</blockquote>
-  <p class="names rv">Idalina Ribeiro <b>·</b> José Coutinho <b>·</b> Alberto Gonçalves</p>
+  <p class="names rv"><span>Idalina Ribeiro</span><b>·</b><span>José Coutinho</span><b>·</b><span>Alberto Gonçalves</span></p>
   <a class="btn solid rv" href="#production-facility" data-i18n="company_cta">See our production facility</a>
 </section>
 

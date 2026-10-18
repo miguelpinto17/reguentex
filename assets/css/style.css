@@ -138,11 +138,45 @@ body.enq-open .enq{transform:none}body.enq-open .enq-scrim{opacity:1;visibility:
   .cta-mail,.cta-est{display:none}.cta-in{justify-content:space-between}
   .nav nav{display:none}.burger{display:block}
   body.menu-open .nav nav{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;position:fixed;inset:0;z-index:70;background:var(--cream);font-size:1rem}
-  .nav{z-index:75}
+  .nav{z-index:75}.burger{position:relative;z-index:80}
+  body.menu-open .burger span{display:none}body.menu-open .burger::after{content:"✕";font-size:1.4rem;line-height:1}
   .cover-mid{display:none}.cover-foot{flex-direction:column;align-items:flex-start}.cover{min-height:44rem}
   .toc,.company,.fac-head,.chap,.spread,.press-2,.contacts,.sub-hero,.req-wrap{grid-template-columns:1fr}
   .toc-i{aspect-ratio:16/9}.chap-t{position:static}.foot-in{grid-template-columns:1fr 1fr}.sub-g,.sub-g.wide{columns:2}
   .tab{writing-mode:horizontal-tb;top:auto;bottom:0;left:0;right:0;transform:none;text-align:center;padding:.95rem}.tab:hover{padding-right:.85rem}
   body{padding-bottom:3rem}
 }
-@media (max-width:600px){.cta-btn.ghost{display:none}.cols,.req,.foot-in{grid-template-columns:1fr}.chap-g{columns:1}.barcode{display:none}.masthead{font-size:12.5vw}}
+@media (max-width:600px){.cols,.req,.foot-in{grid-template-columns:1fr}.chap-g{columns:1}.barcode{display:none}.masthead{font-size:12.5vw}}
+
+/* ---- phone: one calm cover, one primary action ---- */
+.intro-m{display:none}
+@media (max-width:700px){
+  :root{--pad:1.25rem}
+  section{padding-block:3.5rem}
+  .cta-in{padding-block:.45rem;justify-content:space-between}
+  .cta-btn.solid{display:none}                      /* the bottom bar already carries this */
+  .cta-bar .lang{order:-1;border:0;padding:0}
+  .cta-btn{padding:.5rem .9rem}
+  .nav{padding-block:.7rem}.nav-logo{width:8rem}
+  .cover{min-height:calc(100svh - 10.5rem);min-height:max(30rem,calc(100svh - 10.5rem));padding-bottom:1.6rem;grid-template-rows:auto 1fr auto}
+  .masthead{font-size:15.4vw;letter-spacing:.01em;padding-top:1.1rem}
+  .dateline{justify-content:center;margin-top:.5rem;padding:.4rem 0;font-size:.6rem;letter-spacing:.28em}.dateline .loc{display:none}
+  .cover-t h1{font-size:2.9rem;max-width:none}
+  .cover-foot{grid-row:3;align-self:end}
+  .cover .deck,.cover .btn.line{display:none}
+  .cover .btns{margin-top:1.2rem}.cover .btn.solid{width:100%;text-align:center}
+  .intro-m{display:block;padding-block:2.6rem 1rem}
+  .intro-m p{font-family:var(--serif);font-size:1.2rem;line-height:1.55;font-weight:500}.big{font-weight:500}
+  .toc-h h2{font-size:2.4rem}.toc li a{padding:.85rem 0}.toc-i{display:none}
+  .company{gap:1.5rem}.co-t h2,.fac-head h2{font-size:2.5rem}.drop::first-letter{font-size:4.2rem}
+  .pull{font-size:1.5rem;padding:1.6rem 0}.names{display:grid;gap:.2rem;line-height:1.6}.names b{display:none}
+  .fac-head{gap:1.5rem;margin-bottom:2.5rem}.chap{gap:1.4rem;margin-bottom:3rem}.roman{font-size:3.6rem}
+  .chap-g{columns:2;column-gap:.5rem}.chap-g .g{margin-bottom:.5rem}
+  .press>h2{font-size:3.4rem;margin-bottom:1.5rem}.quote{font-size:1.9rem;padding-top:3rem}.quote::before{font-size:5.5rem}
+  .inaug-g{grid-template-columns:repeat(2,1fr)}.press-2{gap:1.2rem}.press-2 figure{max-width:11rem}
+  .contacts{gap:2rem}.ct-l h2{font-size:3.4rem}.ct-i{margin-top:1.5rem}
+  .sub-hero{gap:1.5rem}.sub-hero h1{font-size:3.2rem}.sub-hero figure{aspect-ratio:4/3}
+  .req-wrap{padding:1.5rem 1.25rem}.sub-g,.sub-g.wide{columns:2;column-gap:.5rem}
+  .enq{padding:3.2rem 1.25rem 1.5rem}.enq h2{font-size:2.2rem}
+  .foot{padding-block:2.5rem 4.5rem}.foot-in{gap:1.4rem}
+}
