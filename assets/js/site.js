@@ -8,7 +8,7 @@
   function pick(pair, lang) { return pair ? pair[lang === 'pt' ? 1 : 0] : null; }
 
   /* ---------- language ---------- */
-  var lang = store(LS) || ((navigator.language || '').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en');
+  var lang = store(LS) || 'en';
   function t(key) { return pick(D.c[key], lang); }
 
   function applyLang(l) {
